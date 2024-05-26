@@ -11,7 +11,7 @@ const server = createServer(app);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.get('/', (req, res) => {
-  res.send(join(__dirname, 'index.html'));
+  res.sendFile(join(__dirname, 'index.html'));
 });
 
 server.listen(3000, () => {
